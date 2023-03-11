@@ -5,6 +5,7 @@ let restartButton: Button;
 let images: Images;
 let game: Game;
 let time: Time;
+let myFont: p5.Font
 
 type IngredientKey = keyof Images['ingredients'];
 type RecipeKey = keyof Images['recipes'];
@@ -49,6 +50,8 @@ interface Images {
  * sound files, images etc...
  */
 function preload() {
+
+    myFont = loadFont("assets/fonts/JosefinSans-Medium.ttf");      
 
     images = {
         logo: loadImage("assets/images/logoBig.svg"),
